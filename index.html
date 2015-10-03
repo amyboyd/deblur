@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/Keypress/keypress-2.1.3.min.js"></script>
+        <script src="/dist/concat-src-es5.js"></script>
+
+        <link href="/styles/main.css" rel="stylesheet" />
+    </head>
+    <body ng-app="deblur">
+        <main ng-controller="WorkspaceController">
+            <section id="status-bar">
+                <div>
+                    <p>
+                        Eraser size:
+                        <input ng-model="eraserSize" type="number" min="0" max="100" />
+
+                        <button ng-click="setEraserSize(35)">Set to 35</button>
+                        <button ng-click="setEraserSize(20)">Set to 20</button>
+                        <button ng-click="setEraserSize(5)">Set to 5</button>
+                    </p>
+
+                    <p>
+                        Undo steps:
+
+                        <button ng-click="undoSteps(1)">1 step</button>
+                        <button ng-click="undoSteps(2)">2 steps</button>
+                        <button ng-click="undoSteps(4)">4 steps</button>
+                    </p>
+
+                    <p>Choose a background:</p>
+
+                    <img src="/images/modified/2-non-blur.jpg" height="30"
+                        ng-class="{current: currentSky === '/images/modified/2-non-blur.jpg'}"
+                        />
+                </div>
+            </section>
+
+            <canvas id="canvas" width="930" height="623" style="background-image: url('/images/modified/2-non-blur.jpg');"></canvas>
+
+            <aside id="help-bar">
+                <div>
+                    Keyboard shortcuts:<br />
+                    [ decreases the eraser size<br />
+                    ] increases the eraser size<br />
+                    CTRL-Z to undo<br />
+                    CTRL-Y to redo
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <p>
+                App &copy; 2015, created by <a href="http://amyboyd.co.uk/">Amy Boyd</a>
+            </p>
+
+            <p>
+                Image CC licensed,
+                by <a href="https://www.flickr.com/photos/zebrawishes/2777344213">zebrawishes</a>
+            </p>
+        </footer>
+
+        <img id="original-image" src="/images/modified/2-blur.jpg" />
+
+        <img id="output-image" />
+    </body>
+</html>

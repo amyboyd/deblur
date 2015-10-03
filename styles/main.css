@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+}
+
+#status-bar,
+#help-bar {
+    background: #eef;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#status-bar > div,
+#help-bar > div {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    background-position: top center;
+    background-size: 100% 100%;
+    /* Crosshair is preferred, but pointer is OK too. */
+    cursor: pointer;
+    cursor: crosshair;
+}
+
+#original-image {
+    display: none;
+}
+
+#output-image {
+    display: none;
+}
+
+footer {
+    text-align: center;
+}
