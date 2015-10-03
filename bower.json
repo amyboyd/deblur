@@ -1,0 +1,16 @@
+{
+  "name": "deblur",
+  "version": "0.0.0",
+  "authors": [
+    "Amy Boyd <amy@amyboyd.co.uk>"
+  ],
+  "homepage": "http://deblur.amyboyd.co.uk/",
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "Keypress": "~2.1.3",
+    "angular": "~1.4.7"
+  }
+}
